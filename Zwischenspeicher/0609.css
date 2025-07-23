@@ -1,0 +1,853 @@
+/* Setting base styles for consistency */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: default;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: antiquewhite;
+    background-color: #1e1e1e;
+    /* background-color: #1C1C1C; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ img {
+    user-select: none;
+ }
+ 
+/* h1 {
+    font-size: 0.8em;
+}
+ */
+/* a { 
+    color: inherit;
+    text-decoration: none;
+}
+ */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+.center {
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* .content > div {
+    flex: 1 1 1200px;
+    padding: 20px;
+}
+ */
+
+
+
+
+
+
+/*///////////////////////////////// AboutMe ////////////////////////////////////////////////////////////////////////*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+    top: 0; /* Ensures the header sticks to the top */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    pointer-events: none;
+    z-index: 1; /* Ensures the header stays on top of other content */
+    position: fixed;
+    left: 3.5%;
+}
+
+
+
+
+.toplayout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+.toplayoutBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
+/* Flip Card Styles */
+.flip-card {
+    display: flex;
+    cursor: url(/Images/CursorHK.png), auto;
+    background-color: transparent;
+    perspective: 1000px;
+    width: 100%;
+    height: auto;
+    width: 283px;
+    height: 295px;
+    display: inline-block;
+    margin-top: 80px;
+    /* margin-top: 40px; */
+
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    display: flex;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+}
+
+.flip-card-front {
+    transform: rotateY(0deg);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    color: inherit;
+}
+
+.flip-card-front img, .flip-card-back img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.flip-card-back img {
+    flex: 1;
+}
+
+.flip-card-back p {
+    margin: 10px 0;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Flip Card Text Styles */
+.flip-card-texts2 {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    /* background-color: #696969; */    
+    margin-left: 30px;
+    transition: flex 0.5s ease, opacity 0.5s ease;
+}
+
+.flip-card-texts {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* background-color: #696969; */    
+    margin-left: 50px;
+    margin-top: 80px;
+    transition: flex 0.5s ease, opacity 0.5s ease;
+}
+
+
+
+
+
+
+
+.flip-card-front-text2, .flip-card-back-text2 {
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    color: white;
+    width: 100%; /* Ensure full width */
+    text-align: left; /* Center text horizontally */
+    padding: 10px;
+}
+
+.flip-card-front-text, .flip-card-back-text {
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    color: white;
+    width: 100%; /* Ensure full width */
+    text-align: left; /* Center text horizontally */
+}
+
+
+
+/* Show front text and hide back text when not flipped */
+.flip-card-texts:not(.flipped) .flip-card-front-text {
+    opacity: 1; /* Make visible */
+}
+
+.flip-card-texts:not(.flipped) .flip-card-back-text {
+    opacity: 0; /* Hide back text */
+    pointer-events: none;
+    display: none;
+}
+
+/* Show back text and hide front text when flipped */
+.flip-card-texts.flipped .flip-card-front-text {
+    opacity: 0; /* Hide front text */
+    pointer-events: none;
+    display: none;
+}
+
+.flip-card-texts.flipped .flip-card-back-text {
+    opacity: 1; /* Make back text visible */
+}
+
+
+
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////// Revolve ////////////////////////////////////////////////////////////////////////*/
+
+.Revolve {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+
+.RevolveBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+
+
+
+
+
+.RevolveFC {
+    background-color: transparent;
+    flex-direction: column;
+    perspective: 1000px;
+    width: 236px;
+    height: 246px;
+    width: 283px;
+    height: 295px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.RevolveFC-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    display: flex;
+}
+
+.RevolveFC.flipped.flipped .RevolveFC-inner {
+    transform: rotateY(180deg);
+}
+
+.RevolveFC-front, .RevolveFC-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.RevolveFC-front {
+    transform: rotateY(0deg);
+}
+
+.RevolveFC-back {
+    transform: rotateY(180deg);
+}
+
+.RevolveFC-front img, .RevolveFC-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Flip Card Text Styles */
+.RevolveFC-texts {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    /* background-color: #696969; */    
+    margin-left: 30px;
+    transition: flex 0.5s ease, opacity 0.5s ease;
+}
+
+.RevolveFC-front-text, .RevolveFC-back-text {
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    color: white;
+    width: 100%; /* Ensure full width */
+    text-align: left; /* Center text horizontally */
+    padding: 10px;
+}
+
+.RevolveFC-back-text {
+    text-align: left;
+}
+
+/* Show front text and hide back text when not flipped */
+.RevolveFC-texts:not(.flipped) .RevolveFC-front-text {
+    opacity: 1; /* Make visible */
+}
+
+.RevolveFC-texts:not(.flipped) .RevolveFC-back-text {
+    opacity: 0; /* Hide back text */
+    pointer-events: none;
+    display: none;
+}
+
+/* Show back text and hide front text when flipped */
+.RevolveFC-texts.flipped .RevolveFC-front-text {
+    opacity: 0; /* Hide front text */
+    pointer-events: none;
+    display: none;
+
+}
+
+.RevolveFC-texts.flipped .RevolveFC-back-text {
+    opacity: 1; /* Make back text visible */
+}
+
+
+
+
+
+
+/*///////////////////////////////// Grimm&Grimmer ////////////////////////////////////////////////////////////////////////*/
+
+
+.GnG {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+
+.GnGBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+
+
+
+
+
+.GnGFC {
+    background-color: transparent;
+    flex-direction: column;
+    perspective: 1000px;
+    width: 236px;
+    height: 246px;
+    width: 283px;
+    height: 295px;
+    display: inline-block;
+    cursor: url(/Images/CursorGnG.png), auto;
+}
+
+
+.GnGFC-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    display: flex;
+}
+
+.GnGFC.flipped.flipped .GnGFC-inner {
+    transform: rotateY(180deg);
+}
+
+.GnGFC-front, .GnGFC-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.GnGFC-front {
+    transform: rotateY(0deg);
+}
+
+.GnGFC-back {
+    transform: rotateY(180deg);
+}
+
+.GnGFC-front img, .GnGFC-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Flip Card Text Styles */
+.GnGFC-texts {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    /* background-color: #696969; */    
+    margin-left: 30px;
+    transition: flex 0.5s ease, opacity 0.5s ease;
+}
+
+.GnGFC-front-text, .GnGFC-back-text {
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    color: white;
+    width: 100%; /* Ensure full width */
+    text-align: center; /* Center text horizontally */
+    padding: 10px;
+}
+
+/* Show front text and hide back text when not flipped */
+.GnGFC-texts:not(.flipped) .GnGFC-front-text {
+    opacity: 1; /* Make visible */
+}
+
+.GnGFC-texts:not(.flipped) .GnGFC-back-text {
+    opacity: 0; /* Hide back text */
+    pointer-events: none;
+    display: none;
+}
+
+/* Show back text and hide front text when flipped */
+.GnGFC-texts.flipped .GnGFC-front-text {
+    opacity: 0; /* Hide front text */
+    pointer-events: none;
+    display: none;
+
+}
+
+.GnGFC-texts.flipped .GnGFC-back-text {
+    opacity: 1; /* Make back text visible */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////// WIP ////////////////////////////////////////////////////////////////////////*/
+
+
+.WIP {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+
+.WIPBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+
+
+
+
+
+.WIPFC {
+    background-color: transparent;
+    flex-direction: column;
+    perspective: 1000px;
+    width: 236px;
+    height: 246px;
+    width: 283px;
+    height: 295px;
+    display: inline-block;
+}
+
+
+.WIPFC-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    display: flex;
+}
+
+.WIPFC.flipped.flipped .WIPFC-inner {
+    transform: rotateY(180deg);
+}
+
+.WIPFC-front, .GnGFC-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.WIPFC-front {
+    transform: rotateY(0deg);
+}
+
+.WIPFC-back {
+    transform: rotateY(180deg);
+}
+
+.WIPFC-front img, .WIPFC-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Flip Card Text Styles */
+.WIPFC-texts {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    /* background-color: #696969; */    
+    margin-left: 30px;
+    transition: flex 0.5s ease, opacity 0.5s ease;
+}
+
+.WIPFC-front-text, .WIPFC-back-text {
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    color: white;
+    width: 100%; /* Ensure full width */
+    text-align: center; /* Center text horizontally */
+    padding: 10px;
+}
+
+/* Show front text and hide back text when not flipped */
+.WIPFC-texts:not(.flipped) .WIPFC-front-text {
+    opacity: 1; /* Make visible */
+}
+
+.WIPFC-texts:not(.flipped) .WIPFC-back-text {
+    opacity: 0; /* Hide back text */
+    pointer-events: none;
+    display: none;
+}
+
+/* Show back text and hide front text when flipped */
+.WIPFC-texts.flipped .WIPFC-front-text {
+    opacity: 0; /* Hide front text */
+    pointer-events: none;
+    display: none;
+
+}
+
+.WIPFC-texts.flipped .WIPFC-back-text {
+    opacity: 1; /* Make back text visible */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Optional additional styling for responsiveness */
+@media (max-width: 600px) {
+    .flip-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+* {
+    border: 0px solid blue; /* Add a blue border around all elements */
+}
+
+.cursorhk {
+    cursor: url(/Images/CursorHK.png), auto;
+    background-color: #010415;
+    /*background-color: #0c1532; */
+}
+
+.cursorGnG {
+    cursor: url(/Images/CursorGnG.png), auto;
+}
+
+.round-image {
+    border-radius: 30px;
+}
+
+
+
+.AboutMeHeader2 {
+    margin-top: 40px;
+    line-height: 1.4em;
+    font-size: 2.4em;
+}
+
+.AboutMeHeader {
+    line-height: 1.8em;
+    font-size: 1.2em;
+}
+
+
+
+.AboutMeHeaderBack {
+    line-height: 1.8em;
+    font-size: 1.2em;
+}
+
+
+.AboutMeText {
+    font-size: 1em;
+    line-height: 2em;
+    color: #a39e9b;
+
+}
+
+.MyFavouriteGame {
+    margin-top: 40px;
+    line-height: 1.4em;
+    font-size: 2.4em;
+}
+
+.MyFavouriteGameHeader {
+    font-size: 1.5em;
+}
+
+.MyFavouriteGameText {
+    font-size: 0.7em;
+}
+
+
+
+.Projects {
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ProjectsHeader {
+    font: 2em;
+    color: #fc8403;
+    padding: 12px;
+    position: sticky;
+}
+
+.AboutMeHeadHeader {
+    font: 2em;
+    color: #fc8403;
+    padding-top: 40px;
+}
+
+.Education {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.EducationHeader {
+    display: flex;
+    font: 2em;
+    color: #fc8403;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.Footer {
+    display: flex;
+    width: 93%; /* Adjust width to account for the left and right margins */
+    margin: 0 auto; /* Center the container */
+    gap: 1em;
+    font-size: .75em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Links {
+    /* align-self: flex-end; */
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.DiscordCopyLink {
+    color: #5c64f4;
+}
+
+
+.imagetest {
+    border-radius: 30px;
+    width: 799.5px;
+    height: 563px;
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+
+
+/* margin-bottom: 220px;
+padding-top::20px;
+ */
+
+ /* ^ -- information -- ^ */
+
+
+ .JobText {
+    position: absolute;
+    pointer-events: none;
+ }

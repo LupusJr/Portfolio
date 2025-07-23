@@ -1,0 +1,65 @@
+
+<div class="grid-container">
+    <div class="section1">
+        <section class="AboutMe">
+            <div class="AboutMeWrapper">
+                <div class="AboutMeHeaderWrapper">
+                    <div class="SliderContainer">
+                        <div class="container on" onclick="this.classList.toggle('off'); this.classList.toggle('on')">
+                            <div class="toggle">
+                                <div class="text">more</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="AboutMeHeader">About me</h1>
+                </div>
+                <p>HI! I'm Simon an aspiring Gamedeveloper</p>
+                <p class="AboutMeText">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatum veritatis, consequatur dolorum magni itaque sequi aut quidem doloribus totam quod aspernatur asperiores provident. Est expedita iure nobis quam ullam!
+                </p>
+            </div>
+            
+        </section>
+    </div>
+    <div class="section2">
+        <section class="MyFavouriteGame">
+            <div class="MyFavouriteGameWrapper">
+                <h1>My Favourite Game</h1>
+                <a href="https://www.hollowknight.com">
+                    <img src="/Images/hkRain.jpg" class="MyFavouriteGameImage">
+                </a>
+            </div>
+        </section>
+    </div>
+</div>  
+
+
+
+
+
+
+
+flipCard.addEventListener('mouseenter', function() {
+    if (isFlipped) {
+        flipCard.classList.add('cursorhk');
+    }
+});
+
+flipCard.addEventListener('mouseleave', function() {
+    if (!isFlipped) {
+        flipCard.classList.remove('cursorhk');
+    }
+})
+
+toplayout.addEventListener('mouseenter', function() {
+    if (!isFlipped) {
+        toplayout.classList.remove('cursorhk');
+    }
+});
+
+toplayout.addEventListener('mouseleave', function() {
+    if (!isFlipped) {
+        toplayout.classList.remove('cursorhk');
+    }
+});
+<h1 class="AboutMeHeading">About Me</h1>

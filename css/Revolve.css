@@ -1,0 +1,264 @@
+/* Setting base styles for consistency */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: default;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: antiquewhite;
+    background-color: #543536;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+img {
+    user-select: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+    top: 0; 
+    padding-top: 2%;
+    padding-bottom: 2%;
+    pointer-events: none;
+    z-index: 1;
+    position: fixed;
+    margin-left: 3.5%;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+.center {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.Heading {
+    font: 2em;
+    /* color: #fc8403; */
+    padding: 12px;
+    /* padding-top: 120px; */
+    /* padding-bottom: 15px; */
+    text-align: center;
+}
+
+
+
+
+
+.Revolve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.RevolveImage {
+    width: 100vw;
+    /* min-width: 100vw; */
+    height: auto;
+    object-fit: cover;
+}
+
+.RevolveContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.RevolveLayout {
+    display: flex;
+    /* gap: 2em; */
+    align-items: center;
+    text-align: center;
+}
+
+.RevolveLayout img {
+    width: 600px;
+    height: auto;
+}
+
+.RevolveLayoutText {
+    /* box-sizing: border-box; */
+    width: 600px;
+    height: auto;
+    padding: 10px;
+}
+
+
+
+.TopImage {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+
+
+.JobText {
+    position: absolute;
+    pointer-events: none;
+}
+
+
+
+
+.InfoHeader {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: .75%;
+    font-family: 'Eastwood';
+}
+
+.ProjectDetails {
+    display: flex;
+    gap: 0.5em;
+}
+
+.ProjectDetailsRow {
+    display: flex;
+    gap: 0.5em;
+    font-family: 'Eastwood';
+}
+
+hr {
+    display: block;
+    border: 1px solid black;
+    height: 1px;
+    margin: 20px 0; /* Ensure margin is not collapsing */
+    position: relative; /* Ensures it's positioned in the normal flow */
+    z-index: 1; /* Adjust if necessary */
+}
+
+.Footer {
+    display: flex;
+    width: 93%; /* Adjust width to account for the left and right margins */
+    margin: 0 auto; /* Center the container */
+    gap: 1em;
+    font-size: .75em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Links {
+    /* align-self: flex-end; */
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Eastwood';
+    src:url('/Fonts/Eastwood.woff2') format('woff2'),
+        url('Fonts/Eastwood.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Eastwood {
+    font-family: 'Eastwood', sans-serif;
+}
+
+
+/* Dialog default styles */
+dialog {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    align-items: center;
+    outline: none;
+    max-width: 1200px;
+    color: inherit;
+}
+
+dialog img {
+    border-radius: 25px;
+    align-self: center;
+    max-width: 95%;
+    /* width: 80%; */
+    /* height: auto; */
+}
+
+dialog h1 {
+    color: antiquewhite;
+}
+
+.Modalfade {
+    opacity: 0;
+}
+
+.BlurElement {
+    filter: blur(0px);
+    transition: filter 0.2s ease-in-out;
+}
+
+/* Active blur effect */
+.BlurActive {
+    filter: blur(10px);
+}
+
+.DialogContent {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+
+
+.PictureModal {
+    border: none; 
+    background-color: #1e1e1e;
+    border-radius: 30px; /* Round the corners */
+    padding: 20px; /* Add padding inside the modal */
+    width: 60%; /* ModalWidth */
+    height: 80%; /*ModalHeight */
+    overflow-y: auto;
+}
+
+.ThreeNoodlesImage {
+    height: 600px;
+    width: auto;
+    align-self: center;
+}
+
+.modal-image {
+    cursor: pointer;    
+}

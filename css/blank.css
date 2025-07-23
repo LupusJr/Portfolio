@@ -1,0 +1,140 @@
+/* Setting base styles for consistency */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: url(/Images/CursorGnG.png), auto;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: antiquewhite;
+    background-color: #6c6669;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    user-select: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+    top: 0; 
+    padding-top: 2%;
+    padding-bottom: 2%;
+    pointer-events: none;
+    z-index: 1;
+    position: fixed;
+    margin-left: 3.5%;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+.center {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.Revolve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.RevolveImage {
+    width: 100vw;
+    /* min-width: 100vw; */
+    height: auto;
+    object-fit: cover;
+}
+
+.GnGImage {
+    max-width: 90%;
+}
+
+
+.TopImage{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Footer {
+    display: flex;
+    width: 93%; /* Adjust width to account for the left and right margins */
+    margin: 0 auto; /* Center the container */
+    gap: 1em;
+    font-size: .75em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Links {
+    /* align-self: flex-end; */
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.Platform {
+    display: flex;
+    gap: .5em;
+}
+
+.Tools {
+    display: flex;
+    gap: .5em;
+}
+
+
+.Blank {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+.BlankBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%
+}

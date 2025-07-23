@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #c2c2c2; /* Light gray for text */
+    background-color: #1a1a2e; /* Deep blue background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+.container {
+    text-align: center;
+    background-color: #2e2e3a; /* Stormy gray for the container background */
+    color: #c2c2c2; /* Light gray text color */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+
+h1 {
+    color: #4a4e69; /* Light blue for the heading */
+}
+
+p {
+    color: #6c7a8b; /* Foggy blue for paragraph text */
+}
+
+/* Add a subtle fog effect using pseudo-elements */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 125, 140, 0.2), rgba(0, 125, 140, 0.2) 50%, rgba(0, 0, 0, 0.1));
+    opacity: 0.5; /* Adjust to control visibility */
+    pointer-events: none;
+}

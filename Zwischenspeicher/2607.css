@@ -1,0 +1,233 @@
+/* Setting base styles for consistency */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: default;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: white;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    user-select: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content > div {
+    flex: 1 1 1200px;
+    padding: 20px;
+
+
+}
+.toplayout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-top: 220px;
+    margin-bottom: 220px;
+}
+
+/* Flip Card Styles */
+.flip-card {
+    cursor: url(/Images/CursorHK.png), auto;
+    background-color: transparent;
+    perspective: 1000px;
+    width: 236px;
+    height: 246px;
+    width: 283px;
+    height: 295px;
+    display: inline-block;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    transform: rotateY(0deg);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img, .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Flip Card Text Styles */
+.flip-card-texts {
+    height: 295px;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    position: relative; /* Ensure the text can be positioned absolutely within */
+    overflow: hidden; /* Hide any overflowed text */
+    /* background-color: #696969; */
+    border-radius: 30px;
+    margin-left: 30px;
+}
+
+
+.flip-card-front-text, .flip-card-back-text {
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    color: white;
+    position: absolute; /* Ensure it's positioned within the container */
+    width: 100%; /* Ensure full width */
+    top: 0; /* Align to top of the container */
+    left: 0; /* Align to left of the container */
+    text-align: center; /* Center text horizontally */
+    box-sizing: border-box;
+    padding: 10px;
+    transform: translateY(10px); /* Initial position */
+}
+
+/* Show front text and hide back text when not flipped */
+.flip-card-texts:not(.flipped) .flip-card-front-text {
+    opacity: 1; /* Make visible */
+}
+
+.flip-card-texts:not(.flipped) .flip-card-back-text {
+    opacity: 0; /* Hide back text */
+    pointer-events: none;
+}
+
+/* Show back text and hide front text when flipped */
+.flip-card-texts.flipped .flip-card-front-text {
+    opacity: 0; /* Hide front text */
+    pointer-events: none;
+}
+
+.flip-card-texts.flipped .flip-card-back-text {
+    opacity: 1; /* Make back text visible */
+}
+
+
+
+.round-image {
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Optional additional styling for responsiveness */
+@media (max-width: 600px) {
+    .flip-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+* {
+    border: 0px solid blue; /* Add a blue border around all elements */
+}
+
+.cursorhk {
+    cursor: url(/Images/CursorHK.png), auto;
+    background-color: #010415;
+    /*background-color: #0c1532; */
+}
+
+
+
+.AboutMeHeading {
+    font-size: 0.4em;
+}
+
+.AboutMeHeader {
+    margin-top: 40px;
+}
+
+.AboutMeHeader1 {
+    line-height: 1.4em;
+    font-size: 2.4em;
+}
+
+.AboutMeText {
+    font-size: 2.5em;
+}
+
+.MyFavouriteGameHeader {
+margin-top: 40px;}
+
+
+.MyFavouriteGameHeader {
+    line-height: 1.4em;
+    font-size: 2.5em;
+}
+
+.MyFavouriteGameHeader2 {
+    line-height: 1em;
+}
+
+
+
+.Projects {
+    text-align: center;
+    justify-content: space-between;
+}
+
+.Projects1 {
+    color: #fc8403;
+}
+
+/* width: 283px;
+    height: 295px; */
+
+

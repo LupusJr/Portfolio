@@ -1,0 +1,903 @@
+/* Setting base styles for consistency */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: default;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: antiquewhite;
+    background-color: #1e1e1e;
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%;
+    text-underline-offset: 3px;
+    text-decoration-color: #fc8403;
+}
+
+
+
+img {
+    user-select: none;
+}
+ 
+/* h1 {
+    font-size: 0.8em;
+}
+ */
+/* a { 
+    color: inherit;
+    text-decoration: none;
+}
+ */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    max-width: 100%;
+}
+
+.center {
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+}
+
+/* .content > div {
+    flex: 1 1 1200px;
+    padding: 20px;
+}
+ */
+
+/*///////////////////////////////// AboutMe ////////////////////////////////////////////////////////////////////////*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+    top: 0; /* Ensures the header sticks to the top */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    pointer-events: none;
+    z-index: 12; /* Ensures the header stays on top of other content */
+    position: fixed;
+    margin-left: 3.5%;
+    width: 100vw;
+}
+
+.toplayout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+.toplayoutBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+/* Flip Card Styles */
+.flip-card-containe {
+    width: 100%;
+    padding-top: 95.9%;
+    position: absolute;
+}
+
+.flip-card {
+    display: flex;
+    cursor: url(/Images/CursorHK.png), auto;
+    background-color: transparent;
+    perspective: 1000px;
+    width: 283px;
+    height: 295px;
+    /* display: inline-block; */
+    margin-top: 80px;
+    /* margin-top: 40px; */
+    justify-content: center;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 283px;
+    height: auto;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    align-self: center;
+}
+
+.flip-card-front {
+    transform: rotateY(0deg);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    /* flex-direction: column; 
+    /* text-align: center; */
+    /* align-items: center; */
+    text-align: center;
+    /* color: inherit; */
+}
+
+.flip-card-front img, .flip-card-back img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.flip-card-back img {
+    flex: 1;
+}
+
+.flip-card-back p {
+    /* margin: 10px 0; */
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Flip Card Text Styles */
+
+
+.flip-card-texts {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* background-color: #696969; */    
+    margin-left: 50px;
+    margin-top: 80px;
+    transition: flex 0.5s ease, opacity 0.5s ease;
+}
+
+.flip-card-front-text, .flip-card-back-text {
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    color: white;
+    width: 100%; /* Ensure full width */
+    text-align: left; /* Center text horizontally */
+}
+
+/* Show front text and hide back text when not flipped */
+.flip-card-texts:not(.flipped) .flip-card-front-text {
+    opacity: 1; /* Make visible */
+}
+
+.flip-card-texts:not(.flipped) .flip-card-back-text {
+    opacity: 0; /* Hide back text */
+    pointer-events: none;
+    display: none;
+}
+
+/* Show back text and hide front text when flipped */
+.flip-card-texts.flipped .flip-card-front-text {
+    opacity: 0; /* Hide front text */
+    pointer-events: none;
+    display: none;
+}
+
+.flip-card-texts.flipped .flip-card-back-text {
+    opacity: 1; /* Make back text visible */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.HollowKnightText {
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////// Revolve ////////////////////////////////////////////////////////////////////////*/
+
+.Revolve {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    /* padding-top: 220px; */
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+.RevolveBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* background-color: #543536; */
+}
+
+/*///////////////////////////////// Grimm&Grimmer ////////////////////////////////////////////////////////////////////////*/
+
+.GnG {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+.GnGBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* background-color: #6c6669; */
+}
+
+/*///////////////////////////////// WIP ////////////////////////////////////////////////////////////////////////*/
+
+.NextProject {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+.NextProjectBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%
+}
+
+/* Optional additional styling for responsiveness */
+/* @media (max-width: 700px) {
+    .flip-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    } 
+} */
+
+* {
+    border: 0px solid blue; /* Add a blue border around all elements */
+}
+
+.cursorhk {
+    cursor: url(/Images/CursorHK.png), auto;
+    background-color: #010415;
+    /*background-color: #0c1532; */
+}
+
+.cursorGnG {
+    cursor: url(/Images/CursorGnG.png), auto;
+}
+
+.round-image {
+    border-radius: 30px;
+}
+
+.AboutMeHeader {
+    line-height: 1.8em;
+    font-size: 1.2em;
+}
+
+.AboutMeHeaderBack {
+    line-height: 1.8em;
+    font-size: 1.2em;
+}
+
+.AboutMeText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    font-size: 1em;
+    line-height: 2em;
+    color: #a39e9b;
+}
+
+.MyFavouriteGame {
+    margin-top: 40px;
+    line-height: 1.4em;
+    font-size: 2.4em;
+}
+
+.MyFavouriteGameHeader {
+    font-size: 1.5em;
+}
+
+.MyFavouriteGameText {
+    font-size: 0.7em;
+}
+
+
+
+.AboutMeHeadHeader {
+    font: 2em;
+    color: #fc8403;
+    padding-top: 40px;
+}
+
+.Education {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.Footer {
+    display: flex;
+    width: 93%; /* Adjust width to account for the left and right margins */
+    margin: 0 auto; /* Center the container */
+    gap: 1em;
+    font-size: .75em;
+    padding-top: 250px;
+    padding-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Links {
+    /* align-self: flex-end; */
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProjectImage {
+    position: relative;
+    border-radius: 30px;
+    /* width: 799.5px; */
+    /* height: 563px; */
+    max-width: 800px;
+    height: auto;
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+    display: block; /*Removes Line under Image */
+    width: 100%;
+
+}
+
+ /* ^ -- information -- ^ */
+
+.JobText {
+    position: absolute;
+    bottom: 3px;
+    left: 20px;
+    pointer-events: none;
+    padding: 10px;           /* Adds space inside the box */
+    display: inline-block;    /* Ensures the box fits the text content */
+    border-radius: 15px;       /* Optional: Rounds the corners of the box */
+    color: #ffffff;
+    color: #fc8403;
+    /* background-color: #010415; */
+}
+
+.ToolImage {
+    display: flex;
+    gap: 0.75em;
+    position: absolute;
+    bottom: 22px;
+    right: 25px;
+    /* width: 40px; */
+    height: auto;
+    pointer-events: none;
+}
+
+.ToolImage2 {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    width: 40px;
+    height: auto;
+    pointer-events: none;
+}
+
+.DateText {
+    position: absolute;
+    top: 3px;
+    left: 20px;
+    pointer-events: none;
+    padding: 10px;           /* Adds space inside the box */
+    color: #fc8403;
+}
+
+.highlight {
+    color: #fc8403;
+}
+
+* {
+    outline: 0px solid red; /* Helps visualize element boundaries */
+}
+
+.RevolveModal {
+    /* background-color: #ffffff; */ /* Change background color of modal */
+    background-color: #1e1e1e;
+    border-radius: 30px; /* Round the corners */
+    padding: 20px; /* Add padding inside the modal */
+    width: 60%; /* Set a custom width */
+    height: 80%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    overflow-y: auto;
+    color: #a39e9b;
+    text-decoration-color: #fc8403;
+}
+
+.GnGModal {
+    background-color: #1e1e1e;
+    border-radius: 30px; /* Round the corners */
+    padding: 20px; /* Add padding inside the modal */
+    width: 60%; /* Set a custom width */
+    height: 80%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    overflow-y: auto;
+    color: #a39e9b;
+    text-decoration-color: #fc8403;
+}
+
+/* .modal {
+    width: 80%;
+}
+ */
+
+button.round {
+    background-color: #010415;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 31px;
+    height: 90px;
+    width: 90px;
+    box-shadow: 0 2px 4px darkslategray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button.round:hover {
+    background-color: #041050;
+}
+
+button.round:active {
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+}
+
+.CreditsModal {
+    height: 60%;
+    width: 40%;
+    /* display: inline-block; */
+    background-color: #1e1e1e;
+    border-radius: 5%;
+    color: white;
+    overflow-y: hidden;
+    color: #a39e9b;
+}
+
+.CreditsModal h1{
+    color: #fc8403;
+    text-align: center;
+}
+
+
+/* Dialog default styles */
+dialog {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    /* gap: 10em; */
+}
+
+dialog img {
+    border-radius: 25px;
+    width: 50%;
+    height: auto;
+}
+
+@font-face {
+    font-family: 'Laviossa';
+    src: url('/Fonts/LAVIOSSA-MEDIUMUI.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Laviossa {
+    /* font: bold; */
+    font-family: 'Laviossa', sans-serif;
+
+}
+
+.Laviossa h1 {
+    font-size: 2em;
+}
+
+@font-face {
+    font-family: 'Eastwood';
+    src:url('/Fonts/Eastwood.woff2') format('woff2'),
+        url('Fonts/Eastwood.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Eastwood {
+    font-family: 'Eastwood', sans-serif;
+}
+
+.Eastwood h1 {
+    font-size: 2em;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src:url('/Fonts/Outfit-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Heading {
+    /* font-family: 'Outfit'; */
+    font: 2em;
+    color: #fc8403;
+    padding: 12px;
+    padding-top: 120px;
+    padding-bottom: 69px;
+    text-align: center;
+}
+
+.Project {
+    display: flex;
+    width: 100%;
+    /* width: 1200px; */
+    max-width: 1200px;
+}
+
+.ProjectText {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.75em;
+    word-break: break-word;
+    max-width: 400px;
+    width: 100%;
+    /* flex-wrap: wrap; */
+}
+
+.noscroll {
+    scroll-behavior: none;
+}
+
+/* Fade-out */
+.Modalfade {
+    opacity: 0;
+}
+
+
+/* Default state - no blur */
+.BlurElement {
+    filter: blur(0px);
+    transition: filter 0.2s ease-in-out;
+}
+
+
+.header {
+    filter: blur(0px);
+    transition: filter 0.2s ease-in-out; 
+}
+
+
+/* Active blur effect */
+.BlurActive {
+    filter: blur(10px);
+}
+
+
+
+.AlignRows {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 1em;
+}
+
+.CreditsTextRow {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 1em;
+}
+
+
+
+.EducationImage {
+    padding-top: 0.73em;
+    display: block;
+}
+    
+    /* display: flex; */
+
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* max-width: 40%; */
+    /* flex-grow: 1; */
+    /* max-width: 60%; */
+
+.EducationText h1{
+    font-size: 0.8em;
+}
+/* flex-grow: 2; */
+
+.EducationText h2 {
+    font-size: 1.2em;
+}
+
+.EducationTextBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 1em;
+}
+
+.EducationText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* align-items: center; */
+}
+
+.EducationContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px;
+    background-color: #303030;
+    border-radius: 5%;
+    padding: 10px;           /* Adds space inside the box */
+    display: inline-block;    /* Ensures the box fits the text content */
+    border-radius: 15px;       /* Optional: Rounds the corners of the box */
+    outline-width: 1px;
+    outline-color: #fc8403;
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContentCentered {
+    display: flex;
+    /* display: inline-block; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Row {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-left: 1em;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #041050;
+    /* height: 100px;
+    background-color: #fc8403;
+    outline: #fc8403, 1px; */
+}
+
+.vertical-line {
+    width: 2px;
+    height: 130px;
+    background-color: #fc8403;
+    /* margin: 0 auto; */
+}
+
+
+.EducationText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    flex: 2;
+    padding-left: 1em;
+    /* align-items: center; */
+}
+
+.lowercase {
+    font-size: 0.8em;
+}
+
+.TimeText {
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    padding-right: 1em;
+}
+
+.TextAlignRight {
+    text-align: right;
+}
+
+.ModalHeader h1 {
+    text-align: center;
+    /* padding-bottom: 40px; */
+    /* text-decoration: underline; */
+    /* text-decoration-color: #fc8403; */
+    /* display: block; */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media (max-width: 2150px) {
+    .header {
+        display: none;
+        /* align-items: center; */
+        /* position: static; */
+        /* background-color: #010415; */
+        /* margin-left: 0%; */
+    }
+
+    .header .cursorhk{
+        background-color: #010415;
+    }
+
+}
+
+
+@media (max-width: 1250px) {
+    .toplayout {
+        padding-left: 25px;
+    }
+
+}
+
+    
+
+@media (max-width: 1200px) {
+   
+    .Project {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .ProjectText {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .ProjectText h1 {
+        text-align: center;
+    }
+
+    .Revolve {
+        margin-bottom: 40px;
+    }
+
+    .GnG {
+        padding-top: 70px;
+        margin-bottom: 40px;
+    }
+
+    .Heading {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .EducationContent {
+        flex-direction: column;
+    }
+    
+    .Footer {
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .toplayout {
+        /* padding-top: 0px; */
+        flex-direction: column;
+        gap: 2em;
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .flip-card {
+        margin-top: 0px;
+        align-self: center;
+    }
+
+    .flip-card-texts {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .Heading {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .Footer {
+        flex-direction: column-reverse;
+    }
+
+    .DevelopedBy {
+        text-align: center;   
+    }
+}
+
