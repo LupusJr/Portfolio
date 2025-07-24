@@ -264,6 +264,10 @@ img {
     /* background-color: #543536; */
 }
 
+.cursorRV {
+    cursor: url(/Images/DrehscheibeCursor.png) 25 20, auto;
+}
+
 /*///////////////////////////////// Grimm&Grimmer ////////////////////////////////////////////////////////////////////////*/
 
 .GnG {
@@ -286,6 +290,156 @@ img {
     width: 100%;
     /* background-color: #6c6669; */
 }
+
+.cursorGnG {
+    cursor: url(/Images/CursorGnG.png) 10 0, auto;
+}
+
+/*///////////////////////////////// Re:Formation ////////////////////////////////////////////////////////////////////////*/
+
+
+.RF {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+.ReformationBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* background-color: #6c6669; */
+}
+
+.cursorRF {
+    cursor: url(/Images/CursorReformation.png) 5 0, auto;
+}
+
+
+
+/* Bungee - Flora Forge Heading */
+@font-face {
+    font-family: 'Bungee';
+    src: url('/Fonts/Bungee-Regular.woff2') format('woff2'),
+        url('Fonts/Bungee-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Bungee {
+    font-family: 'Bungee', sans-serif;
+}
+
+.Bungee h1 {
+    font-size: 2em;
+}
+
+/* Fredoka - Flora Forge Text */
+@font-face {
+    font-family: 'Fredoka';
+    src: url('/Fonts/Fredoka-Regular.woff2') format('woff2'),
+        url('Fonts/Fredoka-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Fredoka {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.Fredoka h1 {
+    font-size: 2em;
+}
+/* ///////////// WIP ////////////// */
+
+
+
+
+
+
+
+/*///////////////////////////////// FloraForge ////////////////////////////////////////////////////////////////////////*/
+
+
+.FF {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 246px;
+    margin-bottom: 220px;
+    width: 100%;
+}
+
+.FloraForgeBackground {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* background-color: #6c6669; */
+}
+
+.cursorFF {
+    cursor: url(/Images/CursorFF.png) 43 45, auto;
+}
+
+/* Bungee - Flora Forge Heading */
+@font-face {
+    font-family: 'Bungee';
+    src: url('/Fonts/Bungee-Regular.woff2') format('woff2'),
+        url('Fonts/Bungee-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Bungee {
+    font-family: 'Bungee', sans-serif;
+}
+
+.Bungee h1 {
+    font-size: 2em;
+}
+
+/* Fredoka - Flora Forge Text */
+@font-face {
+    font-family: 'Fredoka';
+    src: url('/Fonts/Fredoka-Regular.woff2') format('woff2'),
+        url('Fonts/Fredoka-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Fredoka {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.Fredoka h1 {
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*///////////////////////////////// WIP ////////////////////////////////////////////////////////////////////////*/
 
@@ -324,14 +478,11 @@ img {
 }
 
 .cursorhk {
-    cursor: url(/Images/CursorHK.png), auto;
+    cursor: url(/Images/CursorHK.png) 0 0, auto;
     background-color: #010415;
     /*background-color: #0c1532; */
 }
 
-.cursorGnG {
-    cursor: url(/Images/CursorGnG.png), auto;
-}
 
 .round-image {
     border-radius: 30px;
@@ -420,8 +571,13 @@ img {
     margin: 0 auto;
     display: block; /*Removes Line under Image */
     width: 100%;
-
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
+
+
+
+
 
  /* ^ -- information -- ^ */
 
@@ -561,6 +717,10 @@ dialog img {
     height: auto;
 }
 
+
+
+/*///////////////////////////////// Fonts ////////////////////////////////////////////////////////////////////////*/
+
 @font-face {
     font-family: 'Laviossa';
     src: url('/Fonts/LAVIOSSA-MEDIUMUI.OTF') format('opentype');
@@ -594,6 +754,12 @@ dialog img {
     font-size: 2em;
 }
 
+
+
+
+
+
+
 @font-face {
     font-family: 'Outfit';
     src:url('/Fonts/Outfit-Regular.woff') format('woff');
@@ -610,6 +776,15 @@ dialog img {
     padding-bottom: 69px;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
 
 .Project {
     display: flex;
